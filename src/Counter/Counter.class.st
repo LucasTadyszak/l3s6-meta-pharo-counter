@@ -20,3 +20,8 @@ Counter >> count [
 	"return the current value of the value instance variable"
 	^ count
 ]
+
+{ #category : #accessing }
+Counter >> count: anInteger [
+	count := anInteger
+]
