@@ -26,6 +26,11 @@ Counter >> count: anInteger [
 	count := anInteger
 ]
 
+{ #category : #counter }
+Counter >> increment [
+	self count: self count + 1 "self count: ((self count) * 1)"
+]
+
 { #category : #initialization }
 Counter >> initialize [ 
 	count := 0
