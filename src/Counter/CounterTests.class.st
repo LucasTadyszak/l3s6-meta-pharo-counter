@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #tests }
+CounterTests >> testAlternateCreationMethod [
+	self assert:	((Counter withValue: 19)	increment; count) equals: 20
+]
+
+{ #category : #tests }
 CounterTests >> testDecrement [
 	| c |
 	c := Counter new.
