@@ -28,3 +28,11 @@ CounterTests >> testInitialize [
 	c := Counter new.
 	self assert: c count equals: 0 "assert:equals:"
 ]
+
+{ #category : #tests }
+CounterTests >> testSetterGetter [
+	| c |
+	c := Counter new.
+	c count: 5.
+	self assert: c count equals: 5 "assert:equals:"
+]
