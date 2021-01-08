@@ -15,6 +15,13 @@ Class {
 	#category : #Counter
 }
 
+{ #category : #'as yet unclassified' }
+Counter class >> withValue: anInteger [
+	| c |
+	c := self new count: anInteger.
+	^ c
+]
+
 { #category : #accessing }
 Counter >> count [ 
 	"return the current value of the value instance variable"
