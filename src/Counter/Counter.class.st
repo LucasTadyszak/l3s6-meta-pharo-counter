@@ -27,6 +27,11 @@ Counter >> count: anInteger [
 ]
 
 { #category : #counter }
+Counter >> decrement [
+	self count: self count - 1
+]
+
+{ #category : #counter }
 Counter >> increment [
 	self count: self count + 1 "self count: ((self count) * 1)"
 ]
