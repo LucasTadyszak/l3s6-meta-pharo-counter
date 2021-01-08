@@ -23,10 +23,8 @@ CounterTests >> testIncrement [
 ]
 
 { #category : #tests }
-CounterTests >> testInitialize [ 
-	| c |
-	c := Counter new.
-	self assert: c count equals: 0 "assert:equals:"
+CounterTests >> testInitialize [
+	self assert: Counter new count equals: 0
 ]
 
 { #category : #tests }
