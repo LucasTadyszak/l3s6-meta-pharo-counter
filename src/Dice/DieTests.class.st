@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #tests }
+DieTests >> testCreationIsOk [
+
+	self assert: (Die withFaces: 20) faces equals: 20
+]
+
+{ #category : #tests }
 DieTests >> testInitializeIsOk [
 
 	self assert: Die new faces equals: 6
