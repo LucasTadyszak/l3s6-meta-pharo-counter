@@ -53,3 +53,11 @@ DieHandleTests >> testSimpleHandle [
 
 	self assert: 2 D20 diceNumber equals: 2
 ]
+
+{ #category : #tests }
+DieHandleTests >> testSumming [
+
+	| handle |
+	handle := 2 D20 + 3 D10.
+	self assert: handle diceNumber equals: 5
+]
