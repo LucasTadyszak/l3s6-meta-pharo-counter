@@ -1,0 +1,26 @@
+1. Donnez l’expression qui rend la liste des nombres positifs
+
+| col |col := OrderedCollection new.col := #(1 2 3 -44 0 5 6 4 5 -3 22 1 2 5).col select: [:each | double each ]
+
+>>> #(1 2 3 0 5 6 4 5 22 1 2 5)
+
+===============================
+2. Donnez l’expression qui rend la liste des carrés des nombres
+
+| col |col := OrderedCollection new.col := #(1 2 3 -44 0 5 6 4 5 -3 22 1 2 5).col collect: [:each | each * each]
+
+>>> #(1 4 9 1936 0 25 36 16 25 9 484 1 4 25)
+
+===============================
+3. Donnez l’expression qui rend la somme des nombres
+
+| col |col := OrderedCollection new.col := #(1 2 3 -44 0 5 6 4 5 -3 22 1 2 5).col sum.
+
+>>> 9
+
+===============================
+4. Donnez l’expression qui rend le premier nombre négatif
+
+| col |col := OrderedCollection new.col := #(1 2 3 -44 0 5 6 4 5 -3 22 1 2 5).col detect: [:each | 0 > each]
+
+>>> -44
