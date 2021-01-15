@@ -44,6 +44,12 @@ DieHandleTests >> testRoll [
 	handle := DieHandle new
 	addDie: (Die withFaces: 6).
 	handle addDie: (Die withFaces: 10).
-	self assert: (handle roll between: handle diceNumber and: handle maxNumber)
+	10 timesRepeat: [ self assert: (handle roll between: handle diceNumber and: handle maxNumber) ]
 
+]
+
+{ #category : #tests }
+DieHandleTests >> testSimpleHandle [
+
+	self assert: 2 D20 diceNumber equals: 2
 ]
