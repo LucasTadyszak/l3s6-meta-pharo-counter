@@ -1,10 +1,6 @@
 Class {
 	#name : #EAddition,
-	#superclass : #EExpression,
-	#instVars : [
-		'left',
-		'right'
-	],
+	#superclass : #EBinaryExpression,
 	#category : #Expressions
 }
 
@@ -25,19 +21,13 @@ EAddition class >> left: anInteger right: anInteger2 [
 ]
 
 { #category : #'public access' }
-EAddition >> evaluate [ 
+EAddition >> evaluateWith: anObject [ 
 
-	^ left evaluate + right evaluate 
+	^ (left evaluateWith: anObject) + (right evaluateWith: anObject) 
 ]
 
 { #category : #'public access' }
-EAddition >> left: anInteger [
+EAddition >> operatorString [
 
-	left := anInteger
-]
-
-{ #category : #'public access' }
-EAddition >> right: anInteger [ 
-
-	right:= anInteger
+	^ ' + '
 ]

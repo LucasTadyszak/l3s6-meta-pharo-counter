@@ -34,6 +34,24 @@ EConstant >> evaluate [
 ]
 
 { #category : #accessing }
+EConstant >> evaluateWith: anObject [ 
+
+	^ value 
+]
+
+{ #category : #accessing }
+EConstant >> negated [
+
+	^ ENegation new expression: self 
+]
+
+{ #category : #accessing }
+EConstant >> printOn: aStream [
+
+	aStream nextPutAll: value printString 
+]
+
+{ #category : #accessing }
 EConstant >> value: anInteger [ 
 
 	value := anInteger

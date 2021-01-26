@@ -1,10 +1,6 @@
 Class {
 	#name : #EMultiplication,
-	#superclass : #EExpression,
-	#instVars : [
-		'left',
-		'right'
-	],
+	#superclass : #EBinaryExpression,
 	#category : #Expressions
 }
 
@@ -25,19 +21,13 @@ EMultiplication class >> left: anExp right: anExp2 [
 ]
 
 { #category : #'public access' }
-EMultiplication >> evaluate [
+EMultiplication >> evaluateWith: anObject [
 	
-	^ left evaluate * right evaluate 
+	^ (left evaluateWith: anObject) * (right evaluateWith: anObject) 
 ]
 
 { #category : #'public access' }
-EMultiplication >> left: anInteger [
-	
-	left := anInteger 
-]
+EMultiplication >> operatorString [
 
-{ #category : #'public access' }
-EMultiplication >> right: anInteger [
-	
-	right := anInteger 
+	^ ' * '
 ]

@@ -20,6 +20,12 @@ ENegation >> evaluate [
 ]
 
 { #category : #'public access' }
+ENegation >> evaluateWith: anObject [ 
+
+	^ (expression evaluateWith: anObject) negated
+]
+
+{ #category : #'public access' }
 ENegation >> expression: anExpression [
 
 	expression := anExpression
@@ -28,5 +34,13 @@ ENegation >> expression: anExpression [
 { #category : #'public access' }
 ENegation >> negated [
 
-	^ self class new expression: self
+	^ expression
+]
+
+{ #category : #'public access' }
+ENegation >> printOn: aStream [
+
+	aStream 
+		nextPutAll: '- ';
+		nextPutAll: expression printString. 
 ]
