@@ -18,6 +18,12 @@ Die class >> withFaces: anInteger [
 ]
 
 { #category : #acccessing }
+Die >> + aDicable [
+
+	^ aDicable sumWithDie: self
+]
+
+{ #category : #acccessing }
 Die >> faces [
 
 	^ faces
@@ -47,4 +53,22 @@ Die >> printOn: aStream [
 Die >> roll [
 
 	^ faces atRandom 
+]
+
+{ #category : #acccessing }
+Die >> sumWithDie: aDie [
+
+	^ DieHandle new 
+		addDie: self;
+		addDie: aDie; yourself
+]
+
+{ #category : #acccessing }
+Die >> sumWithHandle: aDieHandle [
+
+	| handle |
+	handle := DieHandle new.
+	aDieHandle dice do: [ :each | handle addDie: each ].
+	handle addDie: self.
+	^ handle 
 ]
